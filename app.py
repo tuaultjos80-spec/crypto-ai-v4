@@ -102,9 +102,8 @@ if st.button("🤖 Analyser et simuler un cycle", type="primary"):
                 error = trade(sym, "VENTE", holding, "Robot virtuel")
                 notes.append(f"{sym} : vente fictive {holding:.2f} €" if error is None else f"{sym} : {error}")
             else:
-                notes.append(f"{sym} : {action.lower()} — aucun ordre")
-        except Exception as exc:
-            notes.append(f"{sym} : données indisponibles ({type(exc).__name__})")
+                notes.append(f"{sym} : {action.lower()} — aucun except Exception as exc:
+    notes.append(f"{sym} : données indisponibles ({exc})")  ({type(exc).__name__})")
     st.session_state.last_cycle = notes
     st.rerun()
 if "last_cycle" in st.session_state:
